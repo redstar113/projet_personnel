@@ -24,6 +24,8 @@
             ],
             "styles": [
               "src/styles.css"
+
+
             ],
             "scripts": []
           },
@@ -93,6 +95,16 @@
               "src/styles.css"
             ],
             "scripts": []
+          }
+        },
+        "deploy": {
+          "builder": "@angular/fire:deploy",
+          "options": {
+            "prerender": false,
+            "ssr": false,
+            "browserTarget": "Cabinet:build:production",
+            "firebaseProject": "cabinet-6ca3d",
+            "firebaseHostingSite": "cabinet-6ca3d"
           }
         }
       }

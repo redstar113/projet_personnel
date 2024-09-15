@@ -1,0 +1,16 @@
+.form-control {
+    border: 1px solid black !important;
+}
+
+.form-select {
+    border: 1px solid black !important;
+}
+igx-time-picker{
+    width: 400px;
+}
+.timepicker-overlay {
+z-index: 10000000 !important;
+}
+.timepicker-backdrop-overlay {
+    z-index: 10000000 !important;
+}

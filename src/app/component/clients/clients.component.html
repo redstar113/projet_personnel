@@ -1,0 +1,46 @@
+<app-side-nav></app-side-nav>
+<app-header></app-header>
+
+<div class="pc-container">
+  <div class="pc-content">
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-md-8 mt-5">
+      <button routerLink="/addclient" class="btn btn-outline-success" style="margin-bottom: 20px;">Add client</button>
+      <div class="card p-3 shadow">
+        <div class="card-body">
+          <table class="table table-hover">
+            <thead>
+            <tr>
+              <th scope="col">Full Name</th>
+              <th scope="col">Gender</th>
+              <th scope="col">CIN</th>
+              <th scope="col">Age</th>
+              <th scope="col">Phone</th>
+              <th scope="col">Mutuelle</th>
+              <th scope="col">Type</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr *ngFor="let client of clientsList">
+              <td>{{client.full_name}}</td>
+              <td>{{client.gender}}</td>
+              <td>{{client.cin}}</td>
+              <td>{{client.age}}</td>
+              <td>{{client.phone}}</td>
+              <td>{{client.mutuelle}}</td>
+              <td>{{client.type}}</td>
+              <td>
+                <button class="btn btn-outline-danger" (click)="deleteClient(client)">Delete</button>
+              </td>
+            </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+</div>
+</div>
+<app-footer></app-footer>

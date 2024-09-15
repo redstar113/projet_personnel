@@ -1,0 +1,14 @@
+{
+  "targets": {
+    "cabinet-6ca3d": {
+      "hosting": {
+        "Cabinet": [
+          "cabinet-6ca3d"
+        ]
+      }
+    }
+  },
+  "projects": {
+    "default": "cabinet-6ca3d"
+  }
+}

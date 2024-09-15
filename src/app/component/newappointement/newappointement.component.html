@@ -1,0 +1,136 @@
+<app-side-nav></app-side-nav>
+<app-header></app-header>
+<div class="pc-container">
+    <div class="pc-content">
+  <div class="container-fluid">
+    <div class="row">
+<section class="vh-100" >
+    <div class="container-fluid h-100">
+        <div class="row d-flex justify-content-center align-items-center h-100">
+            <div class="col-lg-12 col-xl-11 mb-5">
+                <div class="card text-black" style="border-radius: 25px;">
+                    <div class="card-body p-md-1">
+                        <div class="row justify-content-center">
+                            <div class="col-md-10 col-lg-6 col-xl-7 order-2 order-lg-1">
+                                <p class="text-center h1 fw-bold mb-2 mx-1 mx-md-4 mt-2">New Appointment</p>
+                                <form class="mx-1 mx-md-4">
+                                    <div class="row"> 
+                                        <div class="col-6">
+                                            <div class="d-flex flex-row align-items-center mb-4">
+                                                <i class="fa fa-user fa-lg me-3 fa-fw"></i>
+                                                <div class="   mb-0">
+                                                <!--  <ejs-dropdownlist [dataSource]="clientsList">
+                                                        choose a client
+                                                   </ejs-dropdownlist>--> 
+                                                   <select class="form-control" id="client" name="type" [ngModel]="appointObject.client">
+                                                    <option *ngFor="let p of clientsList" [value]="p.full_name" >{{p.full_name}}</option>
+                                                   </select>
+                                                </div>
+                                            </div>
+                                        </div>
+            
+                                    </div>
+                                
+
+                                    <div class="row">
+                                        <div class="col-6">
+                                            <div class="d-flex flex-row align-items-center mb-4">
+                                                <i class="fa fa-user fa-lg me-3 fa-fw"></i>
+                                                <div class="   mb-0">
+                                                    <input type="date" id="date" name="date" [(ngModel)]="appointObject.appointmentDate"
+                                                        class="form-control" />
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-6">
+                                            <div class="d-flex flex-row align-items-center mb-4">
+                                                <i class="fa fa-clock-o fa-lg me-3 fa-fw"></i>
+                                                <div class="   mb-0">
+                                                   <!-- <select type="text" class="form-control" id="type" name="type" [(ngModel)]="appointObject.appointmentTimeStart">
+                                                        <option value="10:00 AM">10:00</option>
+                                                        <option value="10:30 AM">10:30</option>
+                                                        <option value="10:45 AM">10:45</option>
+                                                        <option value="11:00 AM">11:00</option>
+                                                        <option value="11:15 AM">11:15</option>
+                                                        <option value="11:30 AM">11:30</option>
+                                                        <option value="11:45 AM">11:45</option>
+                                                        <option value="12:00 AM">12:00</option>
+                                                        <option value="12:15 PM">12:15</option>
+                                                        <option value="12:30 PM">12:30</option>
+                                                        <option value="12:45 PM">12:45</option>
+                                                        <option value="13:00 PM">13:00</option>
+                                                        <option value="13:15 PM">13:15</option>
+                                                        <option value="13:30 PM">13:30</option>
+                                                        <option value="13:45 PM">13:45</option>
+                                                        <option value="14:00 PM">14:00</option>
+                                                        <option value="14:15 PM">14:15</option>
+                                                        <option value="14:30 PM">14:30</option>
+                                                        <option value="14:45 PM">14:45</option>
+
+                                                      </select>
+                                                      <igx-time-picker [(ngModel)]="appointObject.appointmentTimeStart" mode="dialog" [inputFormat]="'hh:mm'">
+                                                        <label igxLabel> Start Time </label>
+                                                        <igx-picker-toggle igxSuffix>
+                                                            <igx-icon> home </igx-icon>
+                                                        </igx-picker-toggle>
+                                                        <igx-hint>{{appointObject.appointmentTimeStart.toLocaleString()}}</igx-hint>
+                                                      </igx-time-picker>
+                                                      -->
+                                                     <!-- <igx-time-picker
+                                                      #timePicker
+                                                      [(ngModel)]="appointObject.appointmentTimeStart"
+                                                      [mode]="mode"
+                                                      [minValue]="'10:00:00'"
+                                                      [spinLoop]="false"
+                                                      [inputFormat]="format"
+                                                      >
+                                                      <label igxLabel>Time</label>
+                                                    </igx-time-picker>
+                                                    -->
+                                                    
+                                                    <input  [ngxTimepicker]="picker" class="form-control" id="appointmentTimeStart" name="appointmentTimeStart" [(ngModel)]="appointObject.appointmentTimeStart"  placeholder="Start Time">
+                                    
+                                                    <ngx-material-timepicker #picker></ngx-material-timepicker>
+                                                </div>
+                                            </div>
+                                    
+                                                
+                                                    <div class="d-flex flex-row align-items-center mb-4">
+                                                        <i class="fa fa-clock-o fa-lg me-3 fa-fw"></i>
+                                                        <div class="   mb-0">
+                                                    <input  [ngxTimepicker]="picker" class="form-control" id="appointmentTimeEnd" name="appointmentTimeEnd" [(ngModel)]="appointObject.appointmentTimeEnd"  placeholder="End Time">
+                                    
+                                                    <ngx-material-timepicker #picker></ngx-material-timepicker>
+    
+                                                </div>
+                                                
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="d-flex flex-row align-items-center mb-4">
+                                        <i class="fa fa-file-text fa-lg me-3 fa-fw"></i>
+                                        <div class=" flex-fill mb-0">
+                                            <textarea placeholder="Enter Naration" rows="3"
+                                                class="form-control"></textarea>
+                                        </div>
+                                    </div>
+                                    <div class="d-flex justify-content-center mx-4 mb-3 mb-lg-4">
+                                        <button type="button" class="btn btn-primary btn-lg">Book
+                                            Appointment</button>
+                                    </div>
+                                </form>
+                            </div>
+                            <div
+                                class="col-md-10 col-lg-6 col-xl-5 d-flex align-items-center order-1 order-lg-2">
+                                <img src='assets\images\logo_h-removebg-preview.png'class="img-fluid" alt="Sample image">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+    </div>
+</div> </div> </div>
+<app-footer></app-footer>
